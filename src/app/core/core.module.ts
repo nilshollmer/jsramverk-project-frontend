@@ -5,32 +5,20 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpTokenInterceptor } from './interceptors/http.token.interceptor';
 
 import {
-// DataStreamService,
-// ApiService,
-// ArticlesService,
-// AuthGuard,
-// CommentsService,
-// JwtService,
-// ProfilesService,
-// TagsService,
-// UserService
+    ApiService,
+    JwtService,
+    UserService
 } from './services';
 
 @NgModule({
 imports: [
-  CommonModule
+    CommonModule
 ],
 providers: [
-  { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true },
-  // DataStreamService,
-  // ApiService,
-  // ArticlesService,
-  // AuthGuard,
-  // CommentsService,
-  // JwtService,
-  // ProfilesService,
-  // TagsService,
-  // UserService
+    { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true },
+    ApiService,
+    JwtService,
+    UserService,
 ],
 declarations: []
 })
