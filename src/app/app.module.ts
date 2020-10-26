@@ -14,6 +14,7 @@ import { CoreModule } from './core';
 import { HomeModule } from './home';
 import { AuthModule } from './auth';
 import { AccountModule } from './account';
+import { MarketModule } from './market';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AccountModule } from './account';
     SharedModule,
     HomeModule,
     AccountModule,
-    AuthModule
+    AuthModule,
+    MarketModule
   ],
   providers: [],
   bootstrap: [AppComponent]
