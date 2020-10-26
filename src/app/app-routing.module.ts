@@ -10,6 +10,10 @@ const routes: Routes = [
         path: 'market',
         loadChildren: './market/market.module#MarketModule'
     },
+    {
+        path: 'auth',
+        loadChildren: './auth/auth.module#AuthModule'
+    },
 ];
 
 @NgModule({

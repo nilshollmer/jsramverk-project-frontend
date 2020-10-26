@@ -1,20 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { FormsModule } from '@angular/forms';
+// import { HttpClientModule } from '@angular/common/http';
+// import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import {
     FooterComponent,
     HeaderComponent,
     SharedModule
 } from './shared';
-import { CoreModule } from './core';
-import { HomeModule } from './home';
-import { AuthModule } from './auth';
-import { AccountModule } from './account';
-import { MarketModule } from './market';
+import { CoreModule } from './core/core.module';
+import { HomeModule } from './home/home.module';
+import { AuthModule } from './auth/auth.module';
+import { AccountModule } from './account/account.module';
+import { MarketModule } from './market/market.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,6 @@ import { MarketModule } from './market';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
     CoreModule,
     SharedModule,
     HomeModule,
