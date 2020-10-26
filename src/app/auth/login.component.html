@@ -1,0 +1,23 @@
+
+<form class="text-center">
+
+  <h4 class="h4 mb-4">Sign in</h4>
+  <p>
+    <a [routerLink]="['/auth/register']">Not a member yet?</a>
+  </p>
+
+  <input type="email" id="formEmail" class="form-control mb-4" placeholder="E-mail" [(ngModel)]="email" name="formName">
+
+  <input type="password" id="formPassword" class="form-control mb-4" placeholder="Password" [(ngModel)]="password" name="formPassword">
+
+  <button class="btn btn-lg btn-primary" type="submit" name="login" (click)="submitLoginForm()">Sign in</button>
+
+</form>
+
+<!-- <form class="text-center">
+
+  <p class="h4 mb-4" name="logged-in">You are logged in as {{ currentUser }}</p>
+
+  <button color="info" block="true" class="my-4" type="submit" name="logout" (click)="logout()">Sign out</button>
+
+</form> -->
