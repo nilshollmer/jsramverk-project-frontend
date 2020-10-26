@@ -1,1 +1,44 @@
-<p>header works!</p>
+<nav ngbNav #nav="ngbNav" class="navbar">
+    <div class="container">
+        <a class="navbar-brand" [routerLink]="['/']"><img [src]="'assets/images/fcs_logo-200-cropped.png'" alt="Fantasy Currency Service"></a>
+        <ul ngbNav *ngIf="!isAuthenticated">
+            <li ngbNavItem>
+                <a class="nav-link" routerLink="/">
+                    Home
+                </a>
+            </li>
+            <li ngbNavItem>
+                <a class="nav-link" routerLink="/login">
+                    Login
+                </a>
+            </li>
+            <li ngbNavItem>
+                <a class="nav-link" routerLink="/register">
+                    Register
+                </a>
+            </li>
+        </ul>
+        <ul ngbNav *ngIf="isAuthenticated">
+            <li ngbNavItem>
+                <a class="nav-link" routerLink="/">
+                    Home
+                </a>
+            </li>
+            <li ngbNavItem>
+                <a class="nav-link" routerLink="/register">
+                    Buy stocks
+                </a>
+            </li>
+            <li ngbNavItem>
+                <a class="nav-link" routerLink="/register">
+                    Add balance
+                </a>
+            </li>
+            <li ngbNavItem>
+                <a class="nav-link" routerLink="/login">
+                    Account
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

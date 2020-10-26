@@ -1,1 +1,10 @@
-<p>footer works!</p>
+<footer class="mt-4">
+    <div class="container">
+      <!-- <a [routerLink]="['/']" class="text-white">Fantasy Currency Service</a> -->
+      <a [routerLink]="['/']"><img [src]="'assets/images/fcs_logo-200-cropped.png'" alt="Fantasy Currency Service"></a>
+      <span class="attribution small float-right">
+        &copy; {{ today | date: 'yyyy' }}.
+         Code licensed under MIT.
+      </span>
+    </div>
+</footer>
