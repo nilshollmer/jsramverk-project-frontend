@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
     submitLoginForm() {
         const credentials = { username: this.username, email: this.email, password: this.password};
 
-        this.userService.authenticateUser('login', credentials)
+        this.userService.authenticateUser('register', credentials)
         .subscribe(
             (data) => this.router.navigateByUrl('/'),
             (err) => {
