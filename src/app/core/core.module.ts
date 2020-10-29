@@ -7,7 +7,9 @@ import { HttpTokenInterceptor } from './interceptors/http.token.interceptor';
 import {
     ApiService,
     JwtService,
-    UserService
+    UserService,
+    DatastreamService,
+    AuthGuard
 } from './services';
 
 @NgModule({
@@ -19,6 +21,8 @@ providers: [
     ApiService,
     JwtService,
     UserService,
+    DatastreamService,
+    AuthGuard
 ],
 declarations: []
 })

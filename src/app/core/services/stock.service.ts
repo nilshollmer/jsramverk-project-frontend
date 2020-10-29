@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, ReplaySubject } from 'rxjs';
 
-import { Stock } from '@app/core/models';
 import { ApiService } from './api.service';
 import { UserService } from './user.service';
 import { map, distinctUntilChanged} from 'rxjs/operators';
