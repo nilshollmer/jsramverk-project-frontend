@@ -5,6 +5,7 @@ import { catchError } from 'rxjs/operators';
 
 import { environment } from '@environments/environment';
 import { JwtService } from './jwt.service';
+import { User } from '@app/core/models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,10 +20,16 @@ export class ApiService {
         return throwError(error.error);
     }
 
-    get(path: string, params: HttpParams = new HttpParams()): Observable<any> {
-        return this.http.get(`${environment.api_url}${path}`, { params })
+    get(path: string): Observable<any> {
+        return this.http.get<User>(`${environment.api_url}${path}`)
             .pipe(catchError(this.formatErrors));
     }
+
+    // get(path: string, params: HttpParams = new HttpParams()): Observable<any> {
+    //     console.log(`${environment.api_url}${path}`);
+    //     return this.http.get(`${environment.api_url}${path}`, { params })
+    //         .pipe(catchError(this.formatErrors));
+    // }
 
     post(path: string, body: Object = {}): Observable<any> {
         return this.http.post(`${environment.api_url}${path}`, body)
