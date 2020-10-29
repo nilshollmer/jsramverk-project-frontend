@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
     pokedollar: number;
     rupees: number;
     timeAndDate: string;
-    sizeOfChart = 10;
+    sizeOfChart = 20;
     currencies = {
         bells: 0,
         rings: 0,
