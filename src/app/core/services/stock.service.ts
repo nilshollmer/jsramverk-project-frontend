@@ -37,20 +37,4 @@ export class StockService {
                 return data;
             })
     }
-
-    // updateStockValue(type, currency, value) {
-    //     let new_value = value;
-    //
-    //     if (type == "add") {
-    //         new_value = value + 1;
-    //     } else {
-    //         new_value = value - 1;
-    //     }
-    //     console.log(value);
-    //     console.log(new_value);
-    //     return this.apiService.put('/market/product', {product: currency, sell_value: new_value})
-    //         .subscribe(data => {
-    //             return data;
-    //         })
-    // }
 }

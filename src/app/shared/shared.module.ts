@@ -4,13 +4,16 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { ErrorsListComponent } from './errors-list.component';
 
 import { HeaderComponent, FooterComponent } from './layout';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+      ErrorsListComponent
+  ],
   imports: [
     CommonModule,
     NgbModule,
@@ -22,6 +25,7 @@ import { HeaderComponent, FooterComponent } from './layout';
       CommonModule,
       NgbModule,
       FormsModule,
+      ErrorsListComponent,
       HttpClientModule,
       RouterModule
   ]
