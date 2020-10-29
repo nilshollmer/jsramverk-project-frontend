@@ -1,1 +1,18 @@
-<p>market works!</p>
+<div class="container">
+    <h2 class="text-center">Buy currency</h2>
+    <h4 class="text-center">Current Gold:  {{ currentGold || 0 }} </h4>
+    <div class="row">
+        <div class="col-md-10 mx-auto my-3 p-2" *ngFor="let currency of currencies | keyvalue">
+            <span class="font-weight-bolder text-monospace">
+                {{ currency.key | titlecase }}
+            </span>
+            <div class="float-right">
+                <span class="mr-3">
+                    {{ currency.value }} G
+                </span>
+                <button *ngIf="currentGold >= currency.value" class="btn btn-success float-right" type="button" name="button" (click)="buyCurrency(currency.key, currency.value)">Buy</button>
+                <button *ngIf="currentGold < currency.value" class="btn btn-danger float-right" type="button" name="button" >Not enough gold</button>
+            </div>
+        </div>
+    </div>
+</div>
