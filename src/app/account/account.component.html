@@ -1,1 +1,38 @@
-<p>account works!</p>
+<div class="settings-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 col-xs-12">
+
+        <h1 class="text-xs-center">Manage Account</h1>
+        <p>Username: {{ user.username }}</p>
+        <p>Email: {{ user.email }}</p>
+        <h4>Your account balance: {{ user.balance || 0 }} gold</h4>
+        <label for="gold">Add gold to your account:</label>
+        <input class="form-control mb-4" type="number" [(ngModel)]="addGold" name="gold" value="1">
+        <button class="btn btn-success"
+          (click)="addBalance()">Add gold
+        </button>
+        <hr />
+        <h4>Your current stock:</h4>
+        <hr />
+        <div>
+            <div class="mx-auto my-3 p-2" *ngFor="let item of stock;">
+                <span class="font-weight-bolder text-monospace">
+                    {{ item.product }}
+                </span>
+                <div class="float-right">
+                    <span class="mr-3">
+                        {{ currencies[item.product] }} G
+                    </span>
+                    <button class="btn btn-success float-right" type="button" name="button" (click)="sellCurrency( item.rowid, item.product, currencies[item.product] )">Sell</button>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-danger"
+          (click)="logout()">Logout
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>
